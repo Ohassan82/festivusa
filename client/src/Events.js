@@ -22,12 +22,20 @@ class Events extends Component {
         const mySearch = encodeURIComponent(this.state.searchField);
         clearTimeout(this.state.timeoutId);
        
-            fetch('https://api.predicthq.com/v1/events/?q=' + mySearch)
+            fetch('https://api.predicthq.com/v1/events/?q=' + mySearch, {
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Authorization": "Bearer PHWEekXXhb9dRMk9TeVABeVHYZ9N7b",
+                }
+            })
             .then(results => {
                 return results.json();
             })
             .then(data => {
-                this.setState({ events: data.items });
+                console.log(data)
+                this.setState({ events: data.results });
                 console.log(this.state.events);
         });
     }
@@ -44,9 +52,8 @@ render() {
         <ul>
           {events.map(event => (
             <li key={event.id}>
-            <h1>{event.volumeInfo.title}</h1>
-            <h1>{event.volumeInfo.authors}</h1>
-            <img src={event.volumeInfo.imageLinks.smallThumbnail} alt="book thumbnail"/>
+            <h1>{event.title}</h1>
+            <h1>{event.description}</h1>
             </li>
           ))}
           </ul>
