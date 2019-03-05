@@ -2,7 +2,7 @@ const express = require ("express");
 const mongoose = require ("mongoose");
 const bodyParser = require ("body-parser");
 //const multer = require ("multer");
-const routes = require("./routes");
+//const routes = require("./routes");
 const axios = require("axios");
 const mongodb = require("mongodb");
 const path = require("path")
@@ -26,6 +26,9 @@ if (process.env.NODE_ENV === "production") {
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_8d4vh4fb:eh6saeqn67oao5ig4f5vk1er2c@ds149365.mlab.com:49365/heroku_8d4vh4fb") 
+
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
