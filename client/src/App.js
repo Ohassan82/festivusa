@@ -4,7 +4,7 @@ import Login from "./component/login";
 //import Form from "./component/form";
 import FirstPage from "./pages/FirstPage"
 
-// import "bootstrap/dist/css/bootstrap.min.css";
+ import "bootstrap/dist/css/bootstrap.min.css";
 // import './App.css';
 // import Events from './Events';
 

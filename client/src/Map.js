@@ -27,10 +27,10 @@ class Map extends Component {
                     label: resp.brewery,
                     map: map
                 });
-            }}
+            })}
         </div>
     }
-
 }
+
 
 export default Map;

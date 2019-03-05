@@ -40,32 +40,32 @@ export class Register extends Component {
 									/>
                                 <p>Last Name</p>    
                                     <input 
-                                        value={this.state.firstName}
-                                        name="firstName"
+                                        value={this.state.lastName}
+                                        name="lastName"
 									    onChange={this.handleInputChange}
 									    type="text"
 									    placeholder=""
                                     />
-                                <p>Last Name</p>    
+                                <p>Username</p>    
                                     <input 
-                                        value={this.state.firstName}
-                                        name="firstName"
+                                        value={this.state.userName}
+                                        name="userName"
 									    onChange={this.handleInputChange}
 									    type="text"
 									    placeholder=""
                                     />
-                                <p>Last Name</p>    
+                                <p>email</p>    
                                     <input 
-                                        value={this.state.firstName}
-                                        name="firstName"
+                                        value={this.state.email}
+                                        name="email"
 									    onChange={this.handleInputChange}
 									    type="text"
 									    placeholder=""
                                     />
-                                <p>Last Name</p>    
+                                <p>password</p>    
                                     <input 
-                                        value={this.state.firstName}
-                                        name="firstName"
+                                        value={this.state.password}
+                                        name="password"
 									    onChange={this.handleInputChange}
 									    type="text"
 									    placeholder=""
