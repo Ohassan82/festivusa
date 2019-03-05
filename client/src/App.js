@@ -6,7 +6,7 @@ import FirstPage from "./pages/FirstPage"
 
  import "bootstrap/dist/css/bootstrap.min.css";
 // import './App.css';
-// import Events from './Events';
+ import Events from './Events';
 
 class App extends Component {
   render() {
@@ -16,6 +16,7 @@ class App extends Component {
             <Login />
             <Switch>
                 <Route exact path="/" component={FirstPage} />
+                <Route exact path="/search" component={Events} />
             </Switch>
           </div>
         </Router>
