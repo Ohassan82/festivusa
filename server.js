@@ -2,10 +2,11 @@ const express = require ("express");
 const mongoose = require ("mongoose");
 const bodyParser = require ("body-parser");
 //const multer = require ("multer");
-const routes = require("./routes");
+//const routes = require("./routes");
 const axios = require("axios");
 const mongodb = require("mongodb");
-const path = require("path")
+const path = require("path");
+require('dotenv').config()
 
 
 
@@ -20,11 +21,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Define API routes here
+
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/festivus_db")
+
+
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
