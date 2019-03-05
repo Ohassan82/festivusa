@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-
 import './App.css';
+import Events from './Events';
 
 class App extends Component {
   render() {
     return (
-      <div >
-
-        
+      <div className="App">
+        <Events />
       </div>
     );
   }
