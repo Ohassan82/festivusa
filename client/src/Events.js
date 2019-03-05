@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
 import Search from './Search';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns'
