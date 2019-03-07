@@ -79,4 +79,4 @@ export class Register extends Component {
   }
 }
 
-export default Register
+export default Register;
