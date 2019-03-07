@@ -44,8 +44,9 @@ class Form extends Component {
 	   return (
 			<div>
 				<Container>
-
+					
 					<Card className="login" >
+					
 						<h2 className="h2-l">Login</h2>
 						<br />
 						<form className="formA">
