@@ -3,8 +3,8 @@ import { Route, Router } from 'react-router-dom';
 import App from './App';
 import Auth from './component/auth/Auth';
 import history from './history';
-import Callback from './callback/Callback';
-//import Home from './Home/Home';
+import Callback from './component/callback/Callback';
+
 import Search from './Search';
 
 const auth = new Auth();
@@ -17,6 +17,7 @@ const handleAuthentication = ({location}) => {
 
 export const makeMainRoutes = () => {
 
+ 
     return (
         <Router history={history}>
           <div>
@@ -29,5 +30,7 @@ export const makeMainRoutes = () => {
           </div>
         </Router>
     );
+ // }
   }
+
   
