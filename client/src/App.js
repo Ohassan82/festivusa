@@ -1,23 +1,38 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'reactstrap';
+import { Navbar, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Auth from './component/auth/Auth';
 
 
 class App extends Component {
-  render() {
-    const auth = new Auth();
-    auth.login();
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
 
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
+  }
+
+  componentDidMount() {
+    const { renewSession } = this.props.auth;
+
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      renewSession();
+    }
+  }
+
+  render() {
     const { isAuthenticated } = this.props.auth;
-   
 
     return (
       <div>
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/">FESTIVUS</a>
+              <a href="/">Auth0 - React</a>
             </Navbar.Brand>
             <Button
               bsStyle="primary"
@@ -57,45 +72,13 @@ class App extends Component {
   }
 }
 
+export default App;
 
-  //   return(
-  //     <Auth />
-  //   )
-  // }
 
-  
-  // goTo(route) {
-  //   this.props.history.replace(`/${route}`)
-  // }
 
-  // login() {
-  //   this.props.auth.login();
-  // }
 
-  // logout() {
-  //   this.props.auth.logout();
-  // }
 
-  // componentDidMount() {
-  //   const { renewSession } = this.props.auth;
 
-  //   if (localStorage.getItem('isLoggedIn') === 'true') {
-  //     renewSession();
-  //   }
-  // }
-
-//   render() {
-      
-//     
-  
-  
-  
-  
-  
-  
-  
-  
-  
 //   // render() {
 
 //   //   return (
@@ -116,4 +99,4 @@ class App extends Component {
 // //   }
 // // }
 
- export default App;
+ //export default App;

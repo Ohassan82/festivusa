@@ -4,7 +4,6 @@ import App from './App';
 import Auth from './component/auth/Auth';
 import history from './history';
 import Callback from './component/callback/Callback';
-
 import Search from './Search';
 
 const auth = new Auth();
@@ -16,9 +15,7 @@ const handleAuthentication = ({location}) => {
   }
 
 export const makeMainRoutes = () => {
-
- 
-    return (
+  return (
         <Router history={history}>
           <div>
             <Route path="/" render={(props) => <App auth={auth} {...props} />} />
@@ -30,7 +27,6 @@ export const makeMainRoutes = () => {
           </div>
         </Router>
     );
- // }
-  }
+ }
 
   
