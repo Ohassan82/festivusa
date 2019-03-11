@@ -13,70 +13,74 @@ class Form extends Component {
 		password: "",
 
 	};
-
-	handleInputChange = event => {
-		let value = event.target.value;
-		const name = event.target.name;
-
-		if (name === "password") {
-			value = value.substring(0,15);
+	render(){
+		return {
+			//<div
 		}
+	}
+	// handleInputChange = event => {
+	// 	let value = event.target.value;
+	// 	const name = event.target.name;
 
-		this.setState({
-			[name]: value
-		});
-	};
+	// 	if (name === "password") {
+	// 		value = value.substring(0,15);
+	// 	}
 
-	handleFormSubmit = event => {
-		event.preventDefault();
-		if (!this.state.userName) {
-			alert ( "Please enter your Username ");
-		} else {
-			alert ('Hello! Welcome to FESTIVUS!');
-		}
+	// 	this.setState({
+	// 		[name]: value
+	// 	});
+	// };
 
-		this.setState({
-			userName: "",
-			password: ""
-		});
-	};
-	render() {
-	   return (
-			<div>
-				<Container>
+	// handleFormSubmit = event => {
+	// 	event.preventDefault();
+	// 	if (!this.state.userName) {
+	// 		alert ( "Please enter your Username ");
+	// 	} else {
+	// 		alert ('Hello! Welcome to FESTIVUS!');
+	// 	}
 
-					<Card className="login" >
-						<h2 className="h2-l">Login</h2>
-						<br />
-						<form className="formA">
-							<p className="uName">Username</p>
-								<input
-									value={this.state.username}
-									name="userName"
-									onChange={this.handleInputChange}
-									type="text"
-									placeholder=""
-								/>
-							<p className="pWord">Password</p>
-								<input
-									value={this.state.password}
-									name="password"
-									onChange={this.handleInputChange}
-									type="password"
-									placeholder=""
-								/>
+	// 	this.setState({
+	// 		userName: "",
+	// 		password: ""
+	// 	});
+	// };
+	// render() {
+	//    return (
+	// 		<div>
+	// 			<Container>
 
-							</form>
+	// 				<Card className="login" >
+	// 					<h2 className="h2-l">Login</h2>
+	// 					<br />
+	// 					<form className="formA">
+	// 						<p className="uName">Username</p>
+	// 							<input
+	// 								value={this.state.username}
+	// 								name="userName"
+	// 								onChange={this.handleInputChange}
+	// 								type="text"
+	// 								placeholder=""
+	// 							/>
+	// 						<p className="pWord">Password</p>
+	// 							<input
+	// 								value={this.state.password}
+	// 								name="password"
+	// 								onChange={this.handleInputChange}
+	// 								type="password"
+	// 								placeholder=""
+	// 							/>
 
-					</Card>
+	// 						</form>
+
+	// 				</Card>
 				
-				</Container>
+	// 			</Container>
 				
-			</div>
-			)
-		 }
+	// 		</div>
+	// 		)
+	// 	 }
 
-		}
+		//}
 
 	// 	<div className="SignupForm">
 	// 		<h4>Sign up</h4>
