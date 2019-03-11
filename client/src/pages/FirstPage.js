@@ -6,7 +6,7 @@ import Register from "../component/register/Register"
 
 
 
-export class firstPage extends Component {
+export class FirstPage extends Component {
   render() {
     return (
       <Container Fluid>
@@ -21,4 +21,4 @@ export class firstPage extends Component {
   }
 }
 
-export default firstPage;
+export default FirstPage;
