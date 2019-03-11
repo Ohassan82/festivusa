@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./component/login";
-//import Form from "./component/form";
 import FirstPage from "./pages/FirstPage"
+import "bootstrap/dist/css/bootstrap.min.css";
+import Events from './Events';
+import Auth from './component/auth/Auth';
 
- import "bootstrap/dist/css/bootstrap.min.css";
-// import './App.css';
- import Events from './Events';
 
 class App extends Component {
   render() {
@@ -21,9 +20,7 @@ class App extends Component {
           </div>
         </Router>
 
-      // <div className="App">
-      //   <Events />
-      // </div>
+      
     );
   }
 }
