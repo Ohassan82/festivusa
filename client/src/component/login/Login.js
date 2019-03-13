@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Container, NavbarBrand, Nav, NavLink, NavItem } from "reactstrap";
-
+import "./style.css";
 
 
 class Login extends Component {
