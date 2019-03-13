@@ -3,26 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "@rebass/grid": "^6.0.0-7",
-=======
->>>>>>> d333979856d6bb67b0aa575b595544ef93dad4e5
     "auth0-js": "^9.10.0",
     "bootstrap": "^4.3.1",
     "firebase": "^5.8.6",
+    "jquery": "^3.3.1",
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.3",
     "react-livechat": "^1.1.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
-<<<<<<< HEAD
-    "reactstrap": "^7.1.0",
-    "rebass": "^3.0.1",
-    "styled-components": "^4.1.3"
-=======
     "reactstrap": "^7.1.0"
->>>>>>> d333979856d6bb67b0aa575b595544ef93dad4e5
   },
   "scripts": {
     "start": "react-scripts start",
