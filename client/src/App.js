@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { Navbar, Button } from 'react-bootstrap';
 import './App.css';
+=======
+//import { Navbar, Button } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Register from "./component/register/Register";
+import Login from "./component/login/Login";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./component/login";
+import FirstPage from "./pages/FirstPage"
+import "bootstrap/dist/css/bootstrap.min.css";
+import Events from './Events';
+import Auth from './component/auth/Auth';
+
+>>>>>>> d333979856d6bb67b0aa575b595544ef93dad4e5
 
 class App extends Component {
   goTo(route) {
@@ -27,6 +41,7 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
+<<<<<<< HEAD
       <div>
         <Navbar fluid>
           {/* <Navbar.Header> */}
@@ -67,6 +82,23 @@ class App extends Component {
           {/* </Navbar.Header> */}
         </Navbar>
       </div>
+=======
+    
+        <Router>
+          <div>
+            <Login />
+            <div>
+            <Register />
+            </div>
+            <Switch>
+                <Route exact path="/" component={FirstPage} />
+                <Route exact path="/search" component={Events} />
+            </Switch>
+          </div>
+        </Router>
+
+      
+>>>>>>> d333979856d6bb67b0aa575b595544ef93dad4e5
     );
   }
 }
