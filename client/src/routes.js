@@ -5,7 +5,8 @@ import Home from './Home/Home';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
-import Events from "./Events";
+
+import EventDetail from "./component/eventDetail/EventDetail";
 //import Search from "./Search";
 
 const auth = new Auth();
@@ -22,7 +23,11 @@ export const makeMainRoutes = () => {
         <div>
           <Route path="/" render={(props) => <App auth={auth} {...props} />} />
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
-          <Route path="/search" component={Events} />
+          {/* <Route path="/search" component={Events} /> */}
+          <Route path="/eventdetail/:id"
+                  render={props => (
+                    <EventDetail key={props.match.params.id} {...props} />
+                  )}/>
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback {...props} /> 

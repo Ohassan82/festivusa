@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import { Navbar, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-//import Register from "./component/register/Register";
-//import Login from "./component/login/Login";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import Login from "./component/login";
-//import FirstPage from "./pages/FirstPage"
-//import "bootstrap/dist/css/bootstrap.min.css";
-//import Events from './Events';
-//import Auth from './component/auth/Auth';
-
-
+//import FirstPage from "./pages/FirstPage";
+//import EventDetail from "./component/eventDetail/EventDetail";
+//import Events from './component/events/Events';
+//import Search from './component/search/Search';
 
 
 class App extends Component {
@@ -78,6 +74,21 @@ class App extends Component {
           {/* </Navbar.Header> */}
         </Navbar>
       </div>
+        // <Router>
+        //   <div>
+        //     <Login />
+        //     <Switch>
+        //         <Route exact path="/" component={FirstPage} />
+        //         <Route exact path="/search" component={Events} />
+        //         {/* <Route exact path="/eventdetail" component={EventDetail} /> */}
+        //         <Route path="/eventdetail/:id"
+        //           render={props => (
+        //             <EventDetail key={props.match.params.id} {...props} />
+        //           )}/>
+        //     </Switch>
+        //   </div>
+        // </Router>
+
     );
   }
 }
