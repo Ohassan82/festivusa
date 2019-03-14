@@ -2,10 +2,11 @@ import React from 'react';
 import { Route, Router } from 'react-router-dom';
 import App from './App';
 import Home from './Home/Home';
-import Callback from './Callback/Callback';
+//import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
 import EventDetail from "./component/eventDetail/EventDetail";
+import Events from './component/events/Events';
 
 
 const auth = new Auth();
@@ -27,9 +28,9 @@ export const makeMainRoutes = () => {
                   render={props => (
                     <EventDetail key={props.match.params.id} {...props} />
                   )}/>
-          <Route path="/callback" render={(props) => {
+          <Route path="/search" render={(props) => {
             handleAuthentication(props);
-            return <Callback {...props} /> 
+            return <Events {...props} /> 
           }}/>
         </div>
       </Router>
