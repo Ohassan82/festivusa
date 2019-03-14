@@ -40,10 +40,10 @@ class App extends Component {
         <Navbar fluid>
           {/* <Navbar.Header> */}
             <Navbar.Brand>
-              <a href="/">Auth0 - React</a>
+              <a href="/">FESTIVUS</a>
             </Navbar.Brand>
             <Button
-              bsStyle="primary"
+              bsstyle="primary"
               className="btn-margin"
               onClick={this.goTo.bind(this, 'home')}
             >
@@ -53,7 +53,7 @@ class App extends Component {
               !isAuthenticated() && (
                   <Button
                     id="qsLoginBtn"
-                    bsStyle="primary"
+                    bsstyle="primary"
                     className="btn-margin"
                     onClick={this.login.bind(this)}
                   >
@@ -65,7 +65,7 @@ class App extends Component {
               isAuthenticated() && (
                   <Button
                     id="qsLogoutBtn"
-                    bsStyle="primary"
+                    bsstyle="primary"
                     className="btn-margin"
                     onClick={this.logout.bind(this)}
                   >

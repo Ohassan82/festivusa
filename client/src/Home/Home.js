@@ -10,15 +10,18 @@ class Home extends Component {
       <div className="container">
         {
           isAuthenticated() && (
+              <div>
               <h4>
-                You are logged in!
+                You are logged in, have fun!
               </h4>
+              
+              </div>
             )
         }
         {
           !isAuthenticated() && (
               <h4>
-                You are not logged in! Please{' '}
+                Welcome to FESTIVUS! Please{' '}
                 <href
                   style={{ cursor: 'pointer' }}
                   onClick={this.login.bind(this)}
