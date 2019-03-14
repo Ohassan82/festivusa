@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./component/login";
 //import Form from "./component/form";
@@ -9,6 +10,7 @@ import EventDetail from "./component/eventDetail/EventDetail";
 // import './App.css';
  import Events from './component/events/Events';
  import Search from './component/search/Search';
+
 
 class App extends Component {
   render() {
