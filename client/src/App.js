@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-//import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-//import Login from "./component/login";
-//import FirstPage from "./pages/FirstPage";
-//import EventDetail from "./component/eventDetail/EventDetail";
-//import Events from './component/events/Events';
-//import Search from './component/search/Search';
+
 
 
 class App extends Component {
