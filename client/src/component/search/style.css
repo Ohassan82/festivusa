@@ -1,0 +1,12 @@
+.searchWrapper {
+    background: url('../../assets/festival3.jpg') no-repeat;
+    height: 800px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: -3rem;
+    }
+
+.searchBox {
+    text-align: center;
+    margin-top: 3rem;
+}
