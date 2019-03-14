@@ -45,7 +45,7 @@ class Events extends Component {
 render() {
     const events = this.state.events;
     return (
-    <div>
+    <div>  
         <Search 
         handleSearchText = {e => this.handleSearchText(e)}
         handleSearch= {e => this.handleSearch(e)} 

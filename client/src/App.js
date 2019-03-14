@@ -11,6 +11,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //import Auth from './component/auth/Auth';
 
 
+
+
 class App extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
