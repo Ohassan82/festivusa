@@ -14,8 +14,8 @@ class Login extends Component {
                         <NavbarBrand href="/">FESTIVUS ** Get together **</NavbarBrand>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="">Login</NavLink>
-                                <NavLink href="">Sign In</NavLink>
+                                <NavLink href="">LOGIN</NavLink>
+                                <NavLink href="">REGISTER</NavLink>
                             </NavItem>
                         </Nav>
                     </Container>
