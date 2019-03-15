@@ -1,3 +1,15 @@
 .btn-margin {
   margin: 7px 3px;
 }
+.auth0Wrapper {
+  
+    background: url('../src/assets/festival1.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 3rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-position: center center;
+    
+}

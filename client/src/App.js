@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 
 
@@ -29,7 +30,7 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
-      <div>
+      <div className="auth0Wrapper">
         <Navbar fluid>
           {/* <Navbar.Header> */}
             <Navbar.Brand>

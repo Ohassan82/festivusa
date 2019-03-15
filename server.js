@@ -19,8 +19,9 @@ if (process.env.NODE_ENV === "production") {
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  return res.json({message: "Welcome to the FESTIVUS API"});
 });
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_8d4vh4fb:Iainsam13&@ds149365.mlab.com:49365/heroku_8d4vh4fb") 

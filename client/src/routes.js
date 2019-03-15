@@ -7,13 +7,15 @@ import Auth from './Auth/Auth';
 import history from './history';
 import EventDetail from "./component/eventDetail/EventDetail";
 import Events from './component/events/Events';
-
+import { Redirect } from 'react-router-dom';
 
 const auth = new Auth();
 
 const handleAuthentication = ({location}) => {
   if (/access_token|id_token|error/.test(location.hash)) {
     auth.handleAuthentication();
+return <Redirect to='/search' />
+
   }
 }
 
@@ -28,7 +30,7 @@ export const makeMainRoutes = () => {
                   render={props => (
                     <EventDetail key={props.match.params.id} {...props} />
                   )}/>
-          <Route path="/search" render={(props) => {
+          <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Events {...props} /> 
           }}/>
