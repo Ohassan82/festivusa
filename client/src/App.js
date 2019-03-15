@@ -30,7 +30,7 @@ class App extends Component {
 
     return (
       <div>
-        <Navbar fluid>
+        <Navbar>
           {/* <Navbar.Header> */}
             <Navbar.Brand>
               <a href="/">FESTIVUS</a>
