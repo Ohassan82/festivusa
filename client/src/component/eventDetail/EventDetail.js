@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-//import './App.css';
-import Search from '../search/Search';
-import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns'
+import React from 'react';
+
+
 
 const EventDetail = (props) => (
     <div>
