@@ -2,6 +2,7 @@ import history from '../history';
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 
+
 export default class Auth {
   accessToken;
   idToken;
@@ -27,6 +28,8 @@ export default class Auth {
 
   login() {
     this.auth0.authorize();
+    this.props.history.push('./search');
+
   }
 
   handleAuthentication() {
@@ -34,7 +37,9 @@ export default class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
       } else if (err) {
-        // history.replace('/home');
+
+        history.replace('/search');
+
         console.log(err);
         alert(`Error: ${err.error}. Check the console for further details.`);
       }
@@ -59,8 +64,10 @@ export default class Auth {
     this.idToken = authResult.idToken;
     this.expiresAt = expiresAt;
 
+    //this.props.history.push("/search"); --trying to redirect here too
+    
     // navigate to the home route
-    history.replace('/home');
+    //history.replace('/search');
   }
 
   renewSession() {
@@ -85,10 +92,15 @@ export default class Auth {
     localStorage.removeItem('isLoggedIn');
 
     // navigate to the home route
-    history.replace('/home');
+    history.replace('/search');
   }
 
+
+
   isAuthenticated() {
+    //history.replace('/search');    --trying to redirect to search from login--
+
+
     // Check whether the current time is past the
     // access token's expiry time
     let expiresAt = this.expiresAt;

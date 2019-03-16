@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+//import "./App.css";
 
 
 
@@ -29,8 +30,12 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
+
       <div>
         <Navbar>
+
+      <div className="">
+
           {/* <Navbar.Header> */}
             <Navbar.Brand>
               <a href="/">FESTIVUS</a>
