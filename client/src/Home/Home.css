@@ -1,0 +1,11 @@
+.yesPlz {
+    background: url('../../assets/festival5.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 3rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-position: center center;
+    }
+

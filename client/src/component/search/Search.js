@@ -8,7 +8,7 @@ const Search = (props) => {
                 <div className="searchBox">
                     <form className="form" onSubmit={props.handleSearch}>
                         <input  onChange = {props.handleSearchText}type="text"/>
-                        <button type="submit">Search</button>
+                        <button type="submit">Festival name or genre</button>
                     </form>
                 </div>
             </div>

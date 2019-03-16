@@ -10,9 +10,9 @@ class Home extends Component {
       <div className="container">
         {
           isAuthenticated() && (
-              <div>
+              <div className="yesPlz">
               <h4>
-                You are logged in, have fun!
+                Find a festival!!!!
               </h4>
               
               </div>

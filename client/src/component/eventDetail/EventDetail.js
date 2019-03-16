@@ -5,10 +5,11 @@ import {
     withGoogleMap,
     withScriptjs
 } from "react-google-maps";
+import "./eventDetail.css"
 
 const EventGMap = withScriptjs(withGoogleMap((props) =>
     <GoogleMap
-        defaultZoom={13}
+        defaultZoom={6}
         defaultCenter={{lat: props.latitude, lng: props.longitude}}>
         <Marker position={{lat: props.latitude, lng: props.longitude}}/>
     </GoogleMap>
@@ -54,19 +55,19 @@ render() {
     console.log(eventDetail)
     return (
      
-        <div>
-        <div>
-            {eventDetail.map((detail, index) => (
-                <div key={detail.id}>
-                    <h1>{detail.title}</h1>
-                    <h2>{detail.description}</h2>
-                    <EventGMap
-                        latitude={detail.location[1]}
-                        longitude={detail.location[0]}
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBtJlR-CAXL8f_w-pbnWf9DGJDWfQ2eGpI&libraries=geometry,drawing,places"
-                        loadingElement={<div style={{height: `100%`}} />}
-                        containerElement={<div style={{height: `400px`}} />}
-                        mapElement={<div style={{height: `100%`}} />}></EventGMap>
+        <div className="detailWrapper">
+            <div>
+                {eventDetail.map((detail, index) => (
+                    <div key={detail.id}>
+                        <h1>{detail.title}</h1>
+                        <h2>{detail.description}</h2>
+                        <EventGMap
+                            latitude={detail.location[1]}
+                            longitude={detail.location[0]}
+                            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBtJlR-CAXL8f_w-pbnWf9DGJDWfQ2eGpI&libraries=geometry,drawing,places"
+                            loadingElement={<div style={{height: `100%`}} />}
+                            containerElement={<div style={{height: `400px`}} />}
+                            mapElement={<div style={{height: `100%`}} />}></EventGMap>
                 </div>
             ))}
             </div>
