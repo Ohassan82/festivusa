@@ -4,9 +4,9 @@ import Login from "./component/login";
 //import theme from "./component/layout";
 //import Form from "./component/form";
 import FirstPage from "./pages/FirstPage"
-
+import "./component/form/style.css";
  import "bootstrap/dist/css/bootstrap.min.css";
- import './App.css';
+ import "./App.css";
  import Events from './Events';
 
 class App extends Component {
@@ -14,9 +14,9 @@ class App extends Component {
     return (
         <Router>
           <div>
-            <Login />
+          <Login />
             <Switch>
-                <Route exact path="/" component={FirstPage} />
+              <Route exact path="/" component={FirstPage} />
                 <Route exact path="/search" component={Events} />
             </Switch>
           </div>

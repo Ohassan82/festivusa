@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import axios from "axios";
-import { Card, Container } from "reactstrap";
+import { Button } from "reactstrap";
 import "./style.css";
 
 
@@ -8,75 +8,18 @@ import "./style.css";
 
 class Form extends Component {
   
-	state = {
-		userName: "",
-		password: "",
-
-	};
-
-	handleInputChange = event => {
-		let value = event.target.value;
-		const name = event.target.name;
-
-		if (name === "password") {
-			value = value.substring(0,15);
-		}
-
-		this.setState({
-			[name]: value
-		});
-	};
-
-	handleFormSubmit = event => {
-		event.preventDefault();
-		if (!this.state.userName) {
-			alert ( "Please enter your Username ");
-		} else {
-			alert ('Hello! Welcome to FESTIVUS!');
-		}
-
-		this.setState({
-			userName: "",
-			password: ""
-		});
-	};
 	render() {
 	   return (
 			<div>
-				<Container>
+				<br />
+				<div className="homeButtoms">
 
-					<Card className="login" >
-						<h2 className="h2-l">Login</h2>
-						<br />
-						<form className="formA">
-							<p className="uName">Username</p>
-								<input
-									value={this.state.username}
-									name="userName"
-									onChange={this.handleInputChange}
-									type="text"
-									placeholder=""
-								/>
-							<p className="pWord">Password</p>
-								<input
-									value={this.state.password}
-									name="password"
-									onChange={this.handleInputChange}
-									type="password"
-									placeholder=""
-								/>
-
-							</form>
-
-					</Card>
-				
-				</Container>
-				
+      			</div>
 			</div>
 			)
 		 }
 
-		}
+	}
 
 	// 	<div className="SignupForm">
 	// 		<h4>Sign up</h4>

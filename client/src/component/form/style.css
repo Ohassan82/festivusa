@@ -1,6 +1,21 @@
-.login input{
-    margin: 20px;
-    width: 250px;
-    height: 35px;
-    background-Color: rgba(0, 225, 255, 0.788);
-}; 
+
+.homeButtons{
+    margin:                 auto!important;
+ 
+}
+
+Button{
+    background:             #626262;
+    padding:                20px;
+    width:                  180px;  
+    height:                 45px;
+    margin:                 auto!important;
+}
+
+.logtext{
+    padding:                15px;
+}
+
+.regitext{
+    padding:                15px;
+}

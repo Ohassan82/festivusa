@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Container, NavbarBrand, Nav, NavLink, NavItem } from "reactstrap";
-
+import "./style.css";
 
 class Login extends Component {
     render() {
@@ -9,12 +9,7 @@ class Login extends Component {
                 <Navbar color="dark" dark expand="sm" className="mb-5">
                     <Container>
                         <NavbarBrand className="texttype" href="/">FESTIVUS</NavbarBrand>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="">LOGIN</NavLink>
-                                <NavLink href="">REGISTER</NavLink>
-                            </NavItem>
-                        </Nav>
+
                     </Container>
                 </Navbar>
             </div>
