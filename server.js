@@ -24,7 +24,11 @@ app.get("/", (req, res) => {
   return res.json({message: "Welcome to the FESTIVUS API"});
 });
 
+<<<<<<< HEAD
 mongoose.connect(process.env.MONGODB_URI || "//mongodb://heroku_8d4vh4fb:eh6saeqn67oao5ig4f5vk1er2c@ds149365.mlab.com:49365/heroku_8d4vh4fb") 
+=======
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_8d4vh4fb:Iainsam13&@ds149365.mlab.com:49365/heroku_8d4vh4fb") 
+>>>>>>> e593387928e488c0f1494f8d7732f86e1ac4c957
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

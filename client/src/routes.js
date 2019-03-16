@@ -14,7 +14,11 @@ const auth = new Auth();
 const handleAuthentication = ({location}) => {
   if (/access_token|id_token|error/.test(location.hash)) {
     auth.handleAuthentication();
+<<<<<<< HEAD
 return <Redirect to='/callback' />
+=======
+return <Redirect to='/search' />
+>>>>>>> e593387928e488c0f1494f8d7732f86e1ac4c957
 
   }
 }
