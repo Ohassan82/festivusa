@@ -59,7 +59,7 @@ export default class Auth {
     localStorage.setItem('isLoggedIn', 'true');
 
     // Set the time that the access token will expire at
-    let expiresAt = (authResult.expiresIn * 100) + new Date().getTime();
+    let expiresAt = (authResult.expiresIn * 1800) + new Date().getTime();
     this.accessToken = authResult.accessToken;
     this.idToken = authResult.idToken;
     this.expiresAt = expiresAt;

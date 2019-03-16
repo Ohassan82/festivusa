@@ -34,8 +34,6 @@ class App extends Component {
       <div>
         <Navbar>
 
-      <div className="">
-
           {/* <Navbar.Header> */}
             <Navbar.Brand>
               <a href="/">FESTIVUS</a>
