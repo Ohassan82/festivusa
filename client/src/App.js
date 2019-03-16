@@ -30,9 +30,13 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
-      <div className="auth0Wrapper">
-        <Navbar fluid>
-          {/* <Navbar.Header> */}
+
+      <div>
+        <Navbar>
+
+      
+
+        
             <Navbar.Brand>
               <a href="/">FESTIVUS</a>
             </Navbar.Brand>
@@ -66,27 +70,12 @@ class App extends Component {
                     Log Out
                   </Button>
                 )
-            }
-          {/* </Navbar.Header> */}
+            } 
         </Navbar>
       </div>
-        // <Router>
-        //   <div>
-        //     <Login />
-        //     <Switch>
-        //         <Route exact path="/" component={FirstPage} />
-        //         <Route exact path="/search" component={Events} />
-        //         {/* <Route exact path="/eventdetail" component={EventDetail} /> */}
-        //         <Route path="/eventdetail/:id"
-        //           render={props => (
-        //             <EventDetail key={props.match.params.id} {...props} />
-        //           )}/>
-        //     </Switch>
-        //   </div>
-        // </Router>
-
-    );
-  }
+     
+  )
 }
 
 export default App;
+
