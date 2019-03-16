@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+//import "./App.css";
 
 
 
@@ -29,14 +30,14 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
-      <div>
+      <div className="auth0Wrapper">
         <Navbar fluid>
           {/* <Navbar.Header> */}
             <Navbar.Brand>
               <a href="/">FESTIVUS</a>
             </Navbar.Brand>
             <Button
-              bsstyle="primary"
+              bsstyle="danger"
               className="btn-margin"
               onClick={this.goTo.bind(this, 'home')}
             >
@@ -46,7 +47,7 @@ class App extends Component {
               !isAuthenticated() && (
                   <Button
                     id="qsLoginBtn"
-                    bsstyle="primary"
+                    bsstyle="danger"
                     className="btn-margin"
                     onClick={this.login.bind(this)}
                   >
@@ -58,7 +59,7 @@ class App extends Component {
               isAuthenticated() && (
                   <Button
                     id="qsLogoutBtn"
-                    bsstyle="primary"
+                    bsstyle="danger"
                     className="btn-margin"
                     onClick={this.logout.bind(this)}
                   >
