@@ -67,7 +67,7 @@ render() {
             <div className="eventWrapper">
                 <CardColumns>
                     {events.map(event => (
-                        <Card className="p-3" key={event.id} style={{ rgba: '0, 0, 0, 0.5' }} text="white" style={{ width: '18rem' }}>
+                        <Card className="p-3" key={event.id} style={{ rgba: '0, 0, 0, 0.5' , width: '18rem'}} text="white" >
                             <Card.Body>
                                 <Card.Title>{event.title}</Card.Title>
                                 <Card.Subtitle className="mb-2 subtitle">{event.country}</Card.Subtitle>
