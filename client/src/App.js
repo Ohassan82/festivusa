@@ -30,8 +30,12 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
-      <div className="auth0Wrapper">
-        <Navbar fluid>
+
+      <div>
+        <Navbar>
+
+      <div className="">
+
           {/* <Navbar.Header> */}
             <Navbar.Brand>
               <a href="/">FESTIVUS</a>
@@ -90,3 +94,4 @@ class App extends Component {
 }
 
 export default App;
+
